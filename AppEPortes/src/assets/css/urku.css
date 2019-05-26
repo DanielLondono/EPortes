@@ -460,7 +460,7 @@ body {
 
 .rk-item {
   display: block;
-  margin: 0;
+  margin: 110px;
   margin-bottom: .5rem;
   position: relative;
 }
@@ -473,6 +473,7 @@ body {
   width: 100%;
 }
 .rk-item:hover .item-meta {
+
   opacity: 1;
   visibility: visible;
 }
