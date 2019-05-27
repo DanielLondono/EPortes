@@ -1,0 +1,13 @@
+    <div class="page-container">
+        <h1>
+          <strong>INICIO SESIÓN</strong>
+      </h1>
+        <form action="" method="post">
+            <input type="text" name="username" class="username" placeholder="Identificación">
+            <input type="password" name="password" class="password" placeholder="Contraseña">
+            <button [routerLink]="['/home']" type="submit">
+              Ingresar
+            </button>
+            <div class="error"><span>+</span></div>
+        </form>
+    </div>
