@@ -7,6 +7,7 @@ import { HomeComponent } from './shared/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { LoginComponent } from './shared/login/login.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,11 +16,14 @@ import { LoginComponent } from './shared/login/login.component';
     FooterComponent,
     HeaderComponent,
     LoginComponent
+ 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

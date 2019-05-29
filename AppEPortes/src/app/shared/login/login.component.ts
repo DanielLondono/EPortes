@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  showNavigationArrows = false;
+  showNavigationIndicators = false;
+  
+
+  constructor(config: NgbCarouselConfig) {
+    config.interval=5000;
+    config.showNavigationArrows = true;
+    config.showNavigationIndicators = true;
+    config.pauseOnHover=false;
+  }
+
 
   ngOnInit() {
   }
