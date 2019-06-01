@@ -10,6 +10,11 @@ Prerequisitos:
   $npm install -g @angular/cli 
   
 3. Editor de texto de su preferencia
+
   Visual Studio Code, Sublime Text 3 ,Atom
+  
 4. Biblioteca multiplataforma para diseños (Boostrap)
+
+   Open terminal
+   Raiz del proyecto
    $npm install bootstrap
