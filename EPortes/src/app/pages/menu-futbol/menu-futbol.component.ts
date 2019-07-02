@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-futbol',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuFutbolComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
+ 
   ngOnInit() {
   }
 
+
+  ListaEstudiantes() {
+    this.router.navigate(['listaestudiantes']);
+  }
 }

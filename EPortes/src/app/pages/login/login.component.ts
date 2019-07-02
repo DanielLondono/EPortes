@@ -13,7 +13,6 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   hola() {
-    console.log('Prueba');
     this.route.navigate(['home']);
   }
 }

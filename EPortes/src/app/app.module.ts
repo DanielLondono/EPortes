@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TimetableComponent } from './pages/timetable/timetable.component';
 import { MenuFutbolComponent } from './pages/menu-futbol/menu-futbol.component';
+import { ListStudentComponent } from './pages/list-student/list-student.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MenuFutbolComponent } from './pages/menu-futbol/menu-futbol.component';
     HomeComponent,
     LoginComponent,
     TimetableComponent,
-    MenuFutbolComponent
+    MenuFutbolComponent,
+    ListStudentComponent
   ],
   imports: [
     BrowserModule,
