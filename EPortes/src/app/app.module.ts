@@ -10,6 +10,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { TimetableComponent } from './pages/timetable/timetable.component';
 import { MenuFutbolComponent } from './pages/menu-futbol/menu-futbol.component';
 import { ListStudentComponent } from './pages/list-student/list-student.component';
+import { LoginService } from './services/login.service';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,12 @@ import { ListStudentComponent } from './pages/list-student/list-student.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
