@@ -13,7 +13,7 @@ export class LoginService {
 
   Url = 'http://localhost:8080/EscuelaDeportesJDM/rest/entrenadores';
 
-  getEntrenador():Observable <any> {
-    return this.httpLogin.get<any>(this.Url);
+  getEntrenador() {
+    return this.httpLogin.get<TeacherModel[]>(this.Url);
   }
 }
