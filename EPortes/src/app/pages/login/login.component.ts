@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DebugElement } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 import { TeacherModel } from 'src/app/Model/TeacherModel';
@@ -13,6 +13,7 @@ import { Login } from 'src/app/Model/Login';
 export class LoginComponent implements OnInit {
   data = new Login('', '');
   teacher: TeacherModel[];
+  succesful: Boolean;
   constructor(private httpLogin: LoginService, private router: Router) {
   }
 
@@ -21,25 +22,34 @@ export class LoginComponent implements OnInit {
   IncioSesion() {
     this.httpLogin.getEntrenador()
       .subscribe(responseData => {
-        //console.log(responseData);
+        ;
         this.teacher = responseData;
-        //this.router.navigate(['home']);
-       /* console.log(this.teacher);
-        console.log(this.data);
-        */
-        LoginAcces(this.data, this.teacher);
+        this.succesful = LoginAcces(this.data, this.teacher);
+        if (this.succesful == true) {
+          this.router.navigate(['home']);
+        }
+
       }
       );
   }
 }
 
 function LoginAcces(data: Login, response: TeacherModel[]): Boolean {
+
   /*console.log('Los datos son : ');
   console.log(data.username);
   console.log(response[0].correoEnt);
   */
+  // tslint:disable-next-line: forin
   for (let p in response) {
-    console.log(response[p].correoEnt);
+    // tslint:disable-next-line: triple-equals
+
+    if (response[p].contraseñaEnt == data.password) {
+      return true;
+    } else {
+      console.log('Error de autenticacion');
+
+    }
   }
-  return false;
+
 }

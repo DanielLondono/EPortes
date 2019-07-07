@@ -6,5 +6,5 @@ export class TeacherModel {
      public correoEnt: String;
      public generoEnt: String;
      public idEnt: String;
-     public password: String;
+     public nombreEnt:String;
 }
